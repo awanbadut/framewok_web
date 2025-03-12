@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Dosencontroller;
+use App\Http\Controllers\Prodicontroller;
+
 Route::get('/', function () {
     return view('akademik.home');
 });
@@ -88,3 +91,11 @@ Route::get('/pnp/{jurusan}/{prodi}',function($jurusan,$prodi){
 })->name('prodi');
 
 
+Route::get('/mahasiswa-controller',[App\Http\Controllers\Mahasiswacontroller::class,'index']);
+use App\Http\Controllers\Mahasiswacontroller;
+
+Route::get('/mahasiswa-show',[Mahasiswacontroller::class,'show']);
+
+Route::get('/dosen-controller',[Dosencontroller::class,'index']);
+
+Route::get('/prodi-controller/{jurusan}/{prodi}',[Prodicontroller::class,'index']);
