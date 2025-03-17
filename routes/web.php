@@ -99,3 +99,16 @@ Route::get('/mahasiswa-show',[Mahasiswacontroller::class,'show']);
 Route::get('/dosen-controller',[Dosencontroller::class,'index']);
 
 Route::get('/prodi-controller/{jurusan}/{prodi}',[Prodicontroller::class,'index']);
+
+
+Route::get('/insertsql',[Mahasiswacontroller::class,'insertsql']);
+Route::get('/insert-prepared',[Mahasiswacontroller::class,'insertPrepared']);
+Route::get('/insert-binding',[Mahasiswacontroller::class,'insertBinding']);
+Route::get('/insert-eloquent',[Mahasiswacontroller::class,'insertEloquent']);
+Route::get('/update',[Mahasiswacontroller::class,'update']);
+Route::get('/delete',[Mahasiswacontroller::class,'delete']);
+Route::get('/select',[Mahasiswacontroller::class,'select']);
+Route::get('/select-tampil',[Mahasiswacontroller::class,'selectTampil']);
+Route::get('/select-view',[Mahasiswacontroller::class,'selectView']);
+Route::get('/select-where',[Mahasiswacontroller::class,'selectWhere']);
+Route::get('/statement',[Mahasiswacontroller::class,'statement']);
